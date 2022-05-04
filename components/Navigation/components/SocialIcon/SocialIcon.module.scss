@@ -1,0 +1,44 @@
+@import '../../../../styles/mixin';
+
+.socialIcon {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  margin-right: 26px;
+  line-height: 22px;
+  font-size: 13px;
+  color: #dddddd;
+  &:hover {
+    color: #feb518;
+  }
+
+  @include Responsive(M) {
+    margin: 0 10px;
+  }
+
+  &.style1 {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+    line-height: 36px;
+    text-align: center;
+    background: #feb518;
+    color: #ffffff;
+    border-radius: 5px;
+    margin: 0 5px;
+    transition: 0.5s;
+
+    &:hover {
+      background: #000;
+      color: #feb518;
+    }
+  }
+
+  &.style2 {
+    position: relative;
+    top: -10px;
+    margin: 0 5px;
+    font-size: 14px;
+    color: #ffffff;
+  }
+}

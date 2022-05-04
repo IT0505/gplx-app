@@ -1,0 +1,68 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto+Slab&family=Oswald&family=Roboto:wght@300;400;500;600;700;800;900&display=swap');
+
+@import './mixin';
+
+html,
+body {
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto Slab', serif;
+  font-size: 14px;
+  color: #555555;
+  line-height: 1.7em;
+  font-weight: 400;
+}
+
+.section {
+  padding: 100px 0 70px;
+
+  @include Responsive(M) {
+    padding: 70px 0 50px;
+  }
+  @include Responsive(XS) {
+    padding: 50px 0 30px;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
+
+.animate {
+  visibility: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: 'Roboto Slab', serif;
+  font-weight: normal;
+  margin: 0px;
+  background: none;
+  line-height: 1.6em;
+}
+button {
+  font-family: 'Roboto Slab', serif;
+}
+figure {
+  margin: 0;
+}

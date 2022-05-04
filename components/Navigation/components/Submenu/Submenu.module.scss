@@ -1,0 +1,138 @@
+@import '../../../../styles/mixin';
+
+.submenu {
+  // visibility: hidden;
+  // display: flex;
+  display: none;
+  top: 89px;
+  // opacity: 0;
+  flex-direction: column;
+  position: absolute;
+  left: 0px;
+  width: 220px;
+  padding: 0px;
+  z-index: 100;
+  background: #ffffff;
+  border-top: 3px solid #feb518;
+  transition: 0.5s;
+  color: #272727;
+
+  @include Responsive(M) {
+    display: flex;
+    height: 0;
+    max-height: 0;
+    position: relative;
+    top: unset;
+    left: unset;
+    background: transparent;
+    border: none;
+    width: 100%;
+    overflow: hidden;
+    transition: 0.5s max-height;
+  }
+
+  .subItemWrap {
+    position: relative;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+
+    @include Responsive(M) {
+      border: none;
+    }
+
+    .checkbox {
+      display: none;
+    }
+
+    input[type='checkbox']:checked ~ .submenu {
+      transition: 0.5s;
+      height: fit-content;
+      max-height: 500px;
+    }
+    input[type='checkbox']:checked ~ .icon {
+      @include Responsive(M) {
+        transform: rotate(-90deg);
+      }
+    }
+
+    &:hover > .submenu {
+      display: flex;
+      top: 0;
+      left: 220px;
+      color: #000;
+
+      @include Responsive(M) {
+        top: unset;
+        left: unset;
+      }
+    }
+
+    .icon {
+      font-size: 14px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 3;
+
+      @include Responsive(M) {
+        background: none;
+        color: #ffffff;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        padding: 3px 12px;
+        font-size: 14px;
+        border-radius: 0px;
+        outline: none;
+        top: 6px;
+        right: 15px;
+        z-index: 9;
+        cursor: pointer;
+        transform: rotate(90deg);
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.1);
+        }
+      }
+    }
+
+    .subItem {
+      display: block;
+      padding: 10px 15px;
+      position: relative;
+      text-align: left;
+      line-height: 24px;
+      font-weight: 400;
+      font-size: 13px;
+      text-transform: capitalize;
+      cursor: pointer;
+      background-color: #fff;
+
+      transition: 0.5s;
+
+      &:hover {
+        color: #ffffff;
+        background: #feb518;
+
+        @include Responsive(M) {
+          background: rgba(255, 255, 255, 0.1);
+          color: #ffffff;
+        }
+      }
+
+      @include Responsive(M) {
+        text-transform: capitalize;
+        font-size: 14px;
+        text-align: left;
+        margin: 0;
+        font-weight: 500;
+        color: #fff;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 10px 15px 10px 20px;
+        width: 100%;
+        background-color: transparent;
+      }
+    }
+  }
+}

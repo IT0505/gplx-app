@@ -1,0 +1,263 @@
+@import '../../styles/mixin';
+
+.navigation {
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+
+  &.nonTop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    // transition: animation 2s;
+    animation: myMove 1s;
+
+    @keyframes myMove {
+      from {
+        opacity: 0;
+        top: -200px;
+      }
+      to {
+        opacity: 1;
+        top: 0px;
+      }
+    }
+  }
+
+  .navigationInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      // height: 70px;
+      padding: 6px 0px;
+      // min-width: 70px;
+      flex-shrink: 0;
+      flex-grow: 1;
+      max-width: 200px;
+      width: 100%;
+      // margin: 0;
+      position: relative;
+
+      @include Responsive(XS) {
+        max-width: 150px;
+      }
+    }
+
+    .navigationRight {
+      flex-shrink: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.5s right;
+      // height: auto;
+
+      .logo1 {
+        max-width: 200px;
+        width: 100%;
+        margin: 20px 0;
+        height: fit-content;
+        display: none;
+
+        @include Responsive(M) {
+          display: block;
+        }
+      }
+
+      &.open {
+        @include Responsive(M) {
+          right: 0;
+        }
+      }
+
+      @include Responsive(M) {
+        position: fixed;
+        justify-content: flex-start;
+        flex-direction: column;
+        z-index: 999;
+        right: -305px;
+        top: 0;
+        width: 305px;
+        height: 100%;
+        background: #272727;
+
+        overflow-y: auto;
+
+        &::-webkit-scrollbar-track {
+          -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+          background-color: #000;
+          border-radius: 10px;
+          opacity: 0.5;
+        }
+
+        &::-webkit-scrollbar {
+          width: 5px;
+          background-color: transparent;
+          position: relative;
+          right: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          border-radius: 10px;
+          background-color: #eee;
+          // opacity: 0.5;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #fff;
+          }
+        }
+      }
+      .menuItemWrap {
+        position: relative;
+
+        &:hover {
+          .submenu {
+            display: flex;
+          }
+        }
+
+        @include Responsive(M) {
+          width: 100%;
+        }
+
+        .checkbox {
+          display: none;
+        }
+
+        input[type='checkbox']:checked ~ .submenu {
+          transition: all 0.5s;
+          height: fit-content;
+          max-height: 500px;
+        }
+        input[type='checkbox']:checked ~ .icon {
+          @include Responsive(M) {
+            transform: rotate(-90deg);
+          }
+        }
+
+        .icon {
+          display: none;
+          // float: right;
+          line-height: 24px;
+
+          @include Responsive(M) {
+            cursor: pointer;
+            display: inline-block;
+            background: none;
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            padding: 3px 12px;
+            font-size: 14px;
+            border-radius: 0px;
+            outline: none;
+            z-index: 9;
+            position: absolute;
+            top: 9px;
+            right: 15px;
+            transform: rotate(90deg);
+
+            &:hover {
+              background: rgba(255, 255, 255, 0.1);
+            }
+          }
+        }
+
+        .menuItem {
+          position: relative;
+          margin-right: 29px;
+          display: block;
+          border: none;
+          background: none;
+          cursor: pointer;
+          padding: 30px 0px;
+          color: #777777;
+          text-align: center;
+          line-height: 30px;
+          letter-spacing: 0px;
+          font-size: 14px;
+          text-transform: capitalize;
+
+          @include Responsive(M) {
+            text-align: left;
+            margin: 0;
+            font-weight: 500;
+            color: #fff;
+            text-transform: uppercase;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 10px 15px 10px 20px;
+            width: 100%;
+
+            &:hover {
+              background: rgba(255, 255, 255, 0.1);
+              color: #ffffff;
+            }
+          }
+        }
+      }
+      .button {
+        @include Responsive(M) {
+          display: none;
+        }
+      }
+
+      .closeButton {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        height: 40px;
+        width: 40px;
+        background: rgba(255, 255, 255, 0.8);
+        color: #000;
+        text-align: center;
+        font-size: 16px;
+        line-height: 32px;
+        font-weight: 900;
+        border: none;
+        border-radius: 2px;
+        transition: 0.2s;
+
+        &:hover {
+          background: #feb518;
+          color: #fff;
+        }
+
+        @include Responsive(M) {
+          display: block;
+        }
+      }
+
+      .socialIconWrap {
+        display: none;
+        margin: 40px 0 auto;
+
+        @include Responsive(M) {
+          display: flex;
+          justify-content: space-around;
+        }
+      }
+    }
+    .menuButton {
+      display: none;
+      cursor: pointer;
+      height: 42px;
+      width: 42px;
+      background: none;
+      color: #feb518;
+      text-align: center;
+      font-size: 16px;
+      line-height: 32px;
+      border: 2px solid #feb518;
+      font-weight: normal;
+
+      @include Responsive(M) {
+        display: block;
+      }
+    }
+  }
+}
