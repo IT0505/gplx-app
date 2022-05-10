@@ -1,0 +1,12 @@
+@import '../../styles/mixin';
+
+.service {
+  .serviceInner {
+    display: flex;
+    justify-content: space-between;
+
+    @include Responsive(M) {
+      flex-direction: column;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import '../../styles/mixin';
+
+.banner {
+  .bannerInner {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    position: relative;
+    z-index: 1;
+
+    @include Responsive(M) {
+      flex-direction: column;
+      gap: unset;
+      justify-content: center;
+    }
+
+    .leftContent,
+    .rightContent {
+      @include Responsive(M) {
+        text-align: center;
+      }
+      .title {
+        color: #fff;
+        font-size: 32px;
+        font-family: 'Lobster', cursive;
+        margin: 20px 0;
+
+        @include Responsive(M) {
+          font-size: 24px;
+          text-align: center;
+          margin: 0 auto 20px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import '../../../../styles/mixin';
+
+.serviceItem {
+  width: 100%;
+  max-width: 270px;
+  min-height: 300px;
+  background-color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  margin-top: -30px;
+  position: relative;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include Responsive(M) {
+    margin-top: 20px;
+    flex-direction: row;
+    max-width: 100%;
+    min-height: unset;
+    margin-bottom: 20px;
+    gap: 20px;
+  }
+
+  .textWrap {
+    @include Responsive(M) {
+      text-align: left;
+    }
+
+    .description {
+      color: #8d8d8d;
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    .title {
+      font-weight: 700;
+      font-family: 'Time new roman';
+      font-style: italic;
+      font-size: 30px;
+      line-height: 32px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+  }
+  .iconWrap {
+    background: #f1b210;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 42px;
+    margin-top: -60px;
+    margin-bottom: 30px;
+
+    @include Responsive(M) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import logoImg from '../public/img/Logo.png';
 
-export const navigation = {
+export const MDNavigation = {
   logoSrc: logoImg,
   logoAlt: 'gplx',
   navigationList: [
@@ -61,4 +61,12 @@ export const navigation = {
       icon: 'fa-brands fa-tumblr',
     },
   ],
+};
+
+export const MDBanner = {
+  title: 'Sát hạch GPLX(SHG)',
+  title1:
+    'Website giúp bạn ôn tập các câu hỏi lý thuyết của bằng lái loại A1, A2',
+  title2:
+    'Bao gồm 200 câu hỏi lý thuyết chia thành 4 nhóm câu hỏi giúp ôn tập dễ dàng!',
 };

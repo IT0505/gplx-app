@@ -4,10 +4,11 @@ import { useState, useEffect } from 'react';
 import Submenu from './components/Submenu/Submenu';
 import Link from 'next/link';
 import SocialIcon from './components/SocialIcon/SocialIcon';
-import { navigation } from '../../utils/dataConfig';
+import UserButton from '../UserButton/UserButton';
+import { MDNavigation } from '../../utils/dataConfig';
 
 export default function Navigation() {
-  const { logoSrc, logoAlt, navigationList, socialIcons } = navigation;
+  const { logoSrc, logoAlt, navigationList, socialIcons } = MDNavigation;
 
   const [navigationOpen, setNavigationOpen] = useState(false);
   const [top, setTop] = useState(true);
@@ -85,7 +86,7 @@ export default function Navigation() {
               ))}
             </div>
 
-            {/* <Button className={styles.button}>Reservation</Button> */}
+            <UserButton />
           </div>
           <button
             type='button'
