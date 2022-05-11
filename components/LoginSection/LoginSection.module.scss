@@ -1,0 +1,122 @@
+@import '../../styles/mixin.scss';
+.loginSection {
+  background-image: url('/img/408464bde9871fc229045a3dab96794a.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  flex-shrink: 0;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .loginSectionInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+    z-index: 1;
+
+    @include Responsive(M) {
+      flex-direction: column;
+      gap: unset;
+      justify-content: center;
+    }
+
+    .leftContent,
+    .rightContent {
+      width: 50%;
+
+      @include Responsive(M) {
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+    .leftContent {
+      @include Responsive(M) {
+        width: 100%;
+        text-align: center;
+      }
+      .title {
+        color: #fff;
+        font-size: 32px;
+        font-family: 'Lobster', cursive;
+        margin: 20px 0;
+
+        @include Responsive(M) {
+          font-size: 24px;
+          text-align: center;
+          margin: 0 auto 20px;
+        }
+      }
+    }
+
+    .rightContent {
+      .loginForm {
+        background: #ffffff;
+        border-radius: 30px;
+        width: 450px;
+        padding: 20px 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0;
+        margin-left: auto;
+
+        @include Responsive(M) {
+          max-width: 500px;
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        .loginInput {
+          padding: 13px 18px;
+          background: #e4e4e4;
+          border-radius: 50px;
+          width: 100%;
+          font-size: 20px;
+          border: none;
+          outline: none;
+          margin: 10px 0;
+          line-height: 18px;
+
+          &:last-child {
+            margin-bottom: 20px;
+          }
+        }
+
+        .funcWrap {
+          margin-top: 20px;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .rightWrap {
+            .register {
+              margin-left: 10px;
+              color: #feb518;
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 18px;
+              text-decoration-line: underline;
+            }
+          }
+
+          .forgetPassword {
+            font-style: italic;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            color: #008ba9;
+          }
+        }
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@ import styles from './Layout.module.scss';
 import Navigation from '../Navigation/Navigation';
 import Footer from '../Footer/Footer';
 
-export default function Layout({ children }) {
+export const Layout = ({ children }) => {
   return (
     <div className={styles.layout}>
       <div>
@@ -12,4 +12,13 @@ export default function Layout({ children }) {
       <Footer />
     </div>
   );
-}
+};
+
+export const LayoutLogin = ({ children }) => {
+  return (
+    <div className={styles.layout}>
+      <Navigation />
+      {children}
+    </div>
+  );
+};

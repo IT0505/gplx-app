@@ -1,6 +1,7 @@
+import { createContext, useEffect } from 'react';
 import '../styles/global.scss';
 import Script from 'next/script';
-import { useEffect } from 'react';
+
 import {
   fadeIn,
   fadeInRight,
@@ -32,6 +33,8 @@ const classes = StyleSheet.create({
     animationDuration: '1s',
   },
 });
+
+export const LoginContext = createContext();
 
 function MyApp({ Component, pageProps }) {
   const animationList = [
@@ -76,14 +79,18 @@ function MyApp({ Component, pageProps }) {
   });
 
   return (
-    <>
+    <LoginContext.Provider value={{ login: false }}>
       <Script src='https://identity.netlify.com/v1/netlify-identity-widget.js'></Script>
       <Script
         src='https://kit.fontawesome.com/397c67969c.js'
         crossOrigin='anonymous'
       ></Script>
+      <link
+        rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'
+      ></link>
       <Component {...pageProps} />
-    </>
+    </LoginContext.Provider>
   );
 }
 

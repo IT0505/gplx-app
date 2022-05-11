@@ -1,14 +1,14 @@
 import styles from './Banner.module.scss';
 import Parallax from '../Parallax/Parallax';
 import { MDBanner } from '../../utils/dataConfig';
-import Button from '../Button/Button';
+import { NormalButton } from '../Button/Button';
 
 export default function Banner() {
-  const { title, title1, title2 } = MDBanner;
+  const { title, title1, title2, backgroundImage } = MDBanner;
   return (
     <Parallax
-      className={styles.banner}
-      backgroundImage='/img/408464bde9871fc229045a3dab96794a.jpg'
+      className={`${styles.banner} overlay`}
+      backgroundImage={backgroundImage}
     >
       <div className='container'>
         <div className={styles.bannerInner}>
@@ -18,7 +18,7 @@ export default function Banner() {
           </div>
           <div className={styles.rightContent}>
             <h3 className={styles.title}>{title2}</h3>
-            <Button>Thi ngay</Button>
+            <NormalButton>Thi ngay</NormalButton>
           </div>
         </div>
       </div>
