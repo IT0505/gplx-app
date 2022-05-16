@@ -1,0 +1,43 @@
+.examSection {
+  position: relative;
+  height: 100vh;
+  padding: 100px 0;
+  font-size: 20px;
+  background-image: url('/img/background-3.jpg');
+  background-repeat: no-repeat;
+  background-position: top;
+  overflow: auto;
+
+  .examSectionInner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+    position: relative;
+    min-height: 600px;
+    background-color: transparent;
+    border: 9px solid rgba(255, 255, 255, 0.5);
+    padding: 70px 50px;
+    z-index: 1;
+    backdrop-filter: blur(15px);
+    &::after {
+      background: rgba(0, 0, 0, 0.7);
+      content: '';
+      z-index: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    .qaWrap {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      width: 100%;
+      color: #ffffff;
+      z-index: 1;
+    }
+  }
+}
