@@ -1,8 +1,5 @@
-import QnASection from "../components/QnASection/QnASection";
-import {listQuestion} from "../utils/dataConfig"
+import QnASection from '../components/QnASection/QnASection';
 
-export default function Exam(){
-    return (
-        <QnASection data={listQuestion} />
-    )
+export default function Exam() {
+  return <QnASection />;
 }
