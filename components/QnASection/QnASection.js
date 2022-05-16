@@ -20,7 +20,11 @@ export default function QnASection() {
             />
             <AnswerSection answer={data[currentIndex].ans} />
           </div>
-          <QuestionNav set={setCurrentIndex} length={data.length} />
+          <QuestionNav
+            setCurrentIndex={setCurrentIndex}
+            length={data.length}
+            currentIndex={currentIndex}
+          />
         </div>
       </div>
     </div>
