@@ -10,6 +10,7 @@ import { LoginContext } from '../../pages/_app';
 
 export default function Navigation() {
   const { login } = useContext(LoginContext);
+  console.log(login);
 
   const { logoSrc, logoAlt, navigationList, socialIcons } = MDNavigation;
 

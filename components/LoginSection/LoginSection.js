@@ -1,15 +1,48 @@
 import styles from './LoginSection.module.scss';
-import { Formik, Field, Form } from 'formik';
+import { Formik, Field, Form, ErrorMessage } from 'formik';
 import Link from 'next/link';
 import { NormalButton } from '../Button/Button';
-
+import { RedErrorMessage } from '../CustomMessage/CustomMessage';
 const MDLogin = {
   title: 'Sát hạch GPLX (SHG)',
   title1:
     'Website giúp bạn ôn tập các câu hỏi lý thuyết của bằng lái loại A1, A2',
 };
+
+import * as Yup from 'yup';
+
+const RegisterSchema = Yup.object().shape({
+  username: Yup.string()
+    .min(5, 'Too Short!')
+    .max(50, 'Too Long!')
+    .required('Required'),
+  password: Yup.string()
+    .min(8, 'Too Short!')
+    .max(50, 'Too Long!')
+    .required('Required'),
+  confirmPassword: Yup.string()
+    .min(8, 'Too Short!')
+    .max(50, 'Too Long!')
+    .required('Required'),
+});
+
+const LoginSchema = Yup.object().shape({
+  username: Yup.string()
+    .min(5, 'Too Short!')
+    .max(50, 'Too Long!')
+    .required('Required'),
+  password: Yup.string()
+    .min(8, 'Too Short!')
+    .max(50, 'Too Long!')
+    .required('Required'),
+});
+
 export default function LoginSection({ login }) {
   const { title, title1 } = MDLogin;
+
+  const handleLogin = (values) => {
+    window.sessionStorage.setItem('id', values.username);
+  };
   return (
     <div className={`${styles.loginSection} overlay`}>
       <div className='container'>
@@ -22,37 +55,44 @@ export default function LoginSection({ login }) {
             {login ? (
               <Formik
                 initialValues={{
-                  userName: '',
-                  passWord: '',
+                  username: '',
+                  password: '',
                 }}
+                validationSchema={LoginSchema}
                 onSubmit={async (values) => {
                   await new Promise((r) => setTimeout(r, 500));
-                  alert(JSON.stringify(values, null, 2));
+                  handleLogin(values);
                 }}
               >
                 <Form className={styles.loginForm}>
                   <Field
-                    id='userName'
-                    name='userName'
+                    id='username'
+                    name='username'
                     placeholder='Tên đăng nhập'
                     className={styles.loginInput}
                   />
-
+                  <ErrorMessage
+                    name='username'
+                    component={RedErrorMessage}
+                  ></ErrorMessage>
                   <Field
                     type='password'
-                    id='passWord'
-                    name='passWord'
+                    id='password'
+                    name='password'
                     placeholder='Mật khẩu'
                     className={styles.loginInput}
                   />
-
+                  <ErrorMessage
+                    name='password'
+                    component={RedErrorMessage}
+                  ></ErrorMessage>
                   <div className={styles.funcWrap}>
                     <div className={styles.rightWrap}>
                       <NormalButton
                         type='submit'
                         className={styles.submitButton}
                       >
-                        Đăng nhập
+                        Đăng Nhập
                       </NormalButton>
                       <Link href='/register'>
                         <a className={styles.register}>Đăng ký</a>
@@ -71,6 +111,7 @@ export default function LoginSection({ login }) {
                   password: '',
                   confirmPassword: '',
                 }}
+                validationSchema={RegisterSchema}
                 onSubmit={async (values) => {
                   await new Promise((r) => setTimeout(r, 500));
                   alert(JSON.stringify(values, null, 2));
@@ -83,7 +124,10 @@ export default function LoginSection({ login }) {
                     placeholder='Tên đăng nhập'
                     className={styles.loginInput}
                   />
-
+                  <ErrorMessage
+                    name='username'
+                    component={RedErrorMessage}
+                  ></ErrorMessage>
                   <Field
                     type='password'
                     id='password'
@@ -91,7 +135,10 @@ export default function LoginSection({ login }) {
                     placeholder='Mật khẩu'
                     className={styles.loginInput}
                   />
-
+                  <ErrorMessage
+                    name='password'
+                    component={RedErrorMessage}
+                  ></ErrorMessage>
                   <Field
                     type='password'
                     id='confirmPassword'
@@ -99,7 +146,10 @@ export default function LoginSection({ login }) {
                     placeholder='Xác nhận mật khẩu'
                     className={styles.loginInput}
                   />
-
+                  <ErrorMessage
+                    name='confirmPassword'
+                    component={RedErrorMessage}
+                  ></ErrorMessage>
                   <div className={styles.funcWrap}>
                     <div className={styles.rightWrap}>
                       <NormalButton

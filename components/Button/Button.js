@@ -1,13 +1,18 @@
 import styles from './Button.module.scss';
 import Link from 'next/link';
+import { logout } from '../../api/session';
 
-export const NormalButton = ({ children }) => {
-  return <button className={styles.normalButton}>{children}</button>;
+export const NormalButton = ({ children, type }) => {
+  return (
+    <button type={type} className={styles.normalButton}>
+      {children}
+    </button>
+  );
 };
 
-export const UserButton = ({ login, type }) => {
+export const UserButton = ({ login }) => {
   return login ? (
-    <button type={type} className={styles.userButton}>
+    <button className={styles.userButton} onClick={logout}>
       Logout
     </button>
   ) : (

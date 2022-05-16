@@ -1,4 +1,4 @@
-import { createContext, useEffect } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import '../styles/global.scss';
 import Script from 'next/script';
 
@@ -79,7 +79,11 @@ function MyApp({ Component, pageProps }) {
   });
 
   return (
-    <LoginContext.Provider value={{ login: false }}>
+    <LoginContext.Provider
+      value={{
+        login: false,
+      }}
+    >
       <Script src='https://identity.netlify.com/v1/netlify-identity-widget.js'></Script>
       <Script
         src='https://kit.fontawesome.com/397c67969c.js'
