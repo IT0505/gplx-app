@@ -37,6 +37,10 @@
       &.active {
         background-color: #693800;
       }
+      &.answered{
+        background-color: #CC9544;
+        color: #000000;
+      }
     }
   }
 }

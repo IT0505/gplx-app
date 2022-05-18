@@ -83,7 +83,7 @@ export const listQuestion = [
   {
     question: {
       content: "Bạn đang lái xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng hôm sau và cần vượt một xe khác, bạn cần báo hiệu như thế nào để đảm bảo an toàn giao thông?",
-      image: "/img/background-1.jpg",
+      image: "/img/14.jpg",
     },
     ans: {
       true_ans: 3,
@@ -99,7 +99,7 @@ export const listQuestion = [
   {
     question: {
       content: "Bạn đang lái xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng hôm sau và cần vượt một xe khác, bạn cần báo hiệu như thế nào để đảm bảo an toàn giao thông?",
-      image: "/img/Logo.png",
+      image: "/img/15.jpg",
     },
     ans: {
       true_ans: 3,
@@ -115,7 +115,7 @@ export const listQuestion = [
   {
     question: {
       content: "Bạn đang lái xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng hôm sau và cần vượt một xe khác, bạn cần báo hiệu như thế nào để đảm bảo an toàn giao thông?",
-      image: "/img/background-3.jpg",
+      image: "/img/16.jpg",
     },
     ans: {
       true_ans: 3,
@@ -146,7 +146,7 @@ export const listQuestion = [
   {
     question: {
       content: "Bạn đang lái xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng hôm sau và cần vượt một xe khác, bạn cần báo hiệu như thế nào để đảm bảo an toàn giao thông?",
-      image: "/img/Logo.png",
+      image: "/img/17.jpg",
     },
     ans: {
       true_ans: 3,

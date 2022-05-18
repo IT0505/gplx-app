@@ -1,18 +1,14 @@
 import { useState } from 'react';
 import styles from './QuestionNav.module.scss';
 
-export default function QuestionNav({ setCurrentIndex, length, currentIndex }) {
-  const [preItemId, setPreItemId] = useState('item0');
+export default function QuestionNav({ setCurrentIndex, length, currentIndex, listAnswered }) {
 
   const items = [];
   for (let i = 0; i < length; i++) {
     items.push(
       <div
-        id={'item' + i}
         key={i}
-        className={
-          i == currentIndex ? styles.item + ' ' + styles.active : styles.item
-        }
+        className={listAnswered[i] ? i == currentIndex ? styles.item + ' ' + styles.active : styles.item + ' ' + styles.answered : styles.item}
         onClick={() => setCurrentIndex(i)}
       >
         {i + 1}
