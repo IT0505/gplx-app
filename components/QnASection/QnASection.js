@@ -5,20 +5,28 @@ import AnswerSection from './components/AnswerSection/AnswerSection';
 import { useState } from 'react';
 import { listQuestion } from '../../utils/dataConfig';
 
-export default function QnASection() {
+export default function QnASection({status}) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const listTemp = []
   for(let i=0; i<listQuestion.length; i++) {
-    listTemp.push(false)
+    listTemp.push({
+      isAnswered: false,
+      isCorrect: false,
+      index: -1
+    })
   }
 
   const [listAnswered, setListAnswered] = useState(listTemp)
 
 
-  const setAnswered = () => {
+  const setAnswered = (isCorrect, index) => {
     let temp = [...listAnswered]
-    temp[currentIndex] = true;
+    temp[currentIndex] = {
+      isAnswered: true,
+      isCorrect: isCorrect,
+      index: index
+    };
     setListAnswered(temp)
   }
 
@@ -30,6 +38,8 @@ export default function QnASection() {
             <QuestionSection
               question={listQuestion[currentIndex].question}
               index={currentIndex + 1}
+              status={status}
+              listAnswered={listAnswered}
             />
             <AnswerSection 
               answer={listQuestion[currentIndex].ans}

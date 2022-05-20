@@ -29,7 +29,7 @@
         background-color: #255c00;
       }
       &.false{
-        background-color: #770c0c;
+        background-color: #9b0e0e;
       }
       .bubble {
         display: flex;
@@ -51,5 +51,9 @@
         margin-right: 20px;
       }
     }
+  }
+  .trueAns{
+    margin-top: 20px;
+    font-weight: bold;
   }
 }

@@ -99,6 +99,182 @@ export const listQuestion = [
   {
     question: {
       content: "Bạn đang lái xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng hôm sau và cần vượt một xe khác, bạn cần báo hiệu như thế nào để đảm bảo an toàn giao thông?",
+      image: "/img/14.jpg",
+    },
+    ans: {
+      true_ans: 3,
+      description: "Điều 14 Luật Giao thông đường bộ 2008; - Nghị định 46 năm 2016 quy định. Vượt xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng chỉ được báo hiệu bằng đèn.",
+      list: [
+        "Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi.",
+        "Chỉ được báo hiệu bằng còi.",
+        "Phải báo hiệu bằng cả còi và đèn.",
+        "Chỉ được báo hiệu bằng đèn.",
+      ]
+    },
+  },
+  {
+    question: {
+      content: "Bạn đang lái xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng hôm sau và cần vượt một xe khác, bạn cần báo hiệu như thế nào để đảm bảo an toàn giao thông?",
+      image: "/img/14.jpg",
+    },
+    ans: {
+      true_ans: 3,
+      description: "Điều 14 Luật Giao thông đường bộ 2008; - Nghị định 46 năm 2016 quy định. Vượt xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng chỉ được báo hiệu bằng đèn.",
+      list: [
+        "Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi.",
+        "Chỉ được báo hiệu bằng còi.",
+        "Phải báo hiệu bằng cả còi và đèn.",
+        "Chỉ được báo hiệu bằng đèn.",
+      ]
+    },
+  },
+  {
+    question: {
+      content: "Bạn đang lái xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng hôm sau và cần vượt một xe khác, bạn cần báo hiệu như thế nào để đảm bảo an toàn giao thông?",
+      image: "/img/14.jpg",
+    },
+    ans: {
+      true_ans: 3,
+      description: "Điều 14 Luật Giao thông đường bộ 2008; - Nghị định 46 năm 2016 quy định. Vượt xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng chỉ được báo hiệu bằng đèn.",
+      list: [
+        "Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi.",
+        "Chỉ được báo hiệu bằng còi.",
+        "Phải báo hiệu bằng cả còi và đèn.",
+        "Chỉ được báo hiệu bằng đèn.",
+      ]
+    },
+  },
+  {
+    question: {
+      content: "Bạn đang lái xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng hôm sau và cần vượt một xe khác, bạn cần báo hiệu như thế nào để đảm bảo an toàn giao thông?",
+      image: "/img/14.jpg",
+    },
+    ans: {
+      true_ans: 3,
+      description: "Điều 14 Luật Giao thông đường bộ 2008; - Nghị định 46 năm 2016 quy định. Vượt xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng chỉ được báo hiệu bằng đèn.",
+      list: [
+        "Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi.",
+        "Chỉ được báo hiệu bằng còi.",
+        "Phải báo hiệu bằng cả còi và đèn.",
+        "Chỉ được báo hiệu bằng đèn.",
+      ]
+    },
+  },
+  {
+    question: {
+      content: "Bạn đang lái xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng hôm sau và cần vượt một xe khác, bạn cần báo hiệu như thế nào để đảm bảo an toàn giao thông?",
+      image: "/img/14.jpg",
+    },
+    ans: {
+      true_ans: 3,
+      description: "Điều 14 Luật Giao thông đường bộ 2008; - Nghị định 46 năm 2016 quy định. Vượt xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng chỉ được báo hiệu bằng đèn.",
+      list: [
+        "Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi.",
+        "Chỉ được báo hiệu bằng còi.",
+        "Phải báo hiệu bằng cả còi và đèn.",
+        "Chỉ được báo hiệu bằng đèn.",
+      ]
+    },
+  },
+  {
+    question: {
+      content: "Bạn đang lái xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng hôm sau và cần vượt một xe khác, bạn cần báo hiệu như thế nào để đảm bảo an toàn giao thông?",
+      image: "/img/14.jpg",
+    },
+    ans: {
+      true_ans: 3,
+      description: "Điều 14 Luật Giao thông đường bộ 2008; - Nghị định 46 năm 2016 quy định. Vượt xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng chỉ được báo hiệu bằng đèn.",
+      list: [
+        "Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi.",
+        "Chỉ được báo hiệu bằng còi.",
+        "Phải báo hiệu bằng cả còi và đèn.",
+        "Chỉ được báo hiệu bằng đèn.",
+      ]
+    },
+  },
+  {
+    question: {
+      content: "Bạn đang lái xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng hôm sau và cần vượt một xe khác, bạn cần báo hiệu như thế nào để đảm bảo an toàn giao thông?",
+      image: "/img/14.jpg",
+    },
+    ans: {
+      true_ans: 3,
+      description: "Điều 14 Luật Giao thông đường bộ 2008; - Nghị định 46 năm 2016 quy định. Vượt xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng chỉ được báo hiệu bằng đèn.",
+      list: [
+        "Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi.",
+        "Chỉ được báo hiệu bằng còi.",
+        "Phải báo hiệu bằng cả còi và đèn.",
+        "Chỉ được báo hiệu bằng đèn.",
+      ]
+    },
+  },
+  {
+    question: {
+      content: "Bạn đang lái xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng hôm sau và cần vượt một xe khác, bạn cần báo hiệu như thế nào để đảm bảo an toàn giao thông?",
+      image: "/img/14.jpg",
+    },
+    ans: {
+      true_ans: 3,
+      description: "Điều 14 Luật Giao thông đường bộ 2008; - Nghị định 46 năm 2016 quy định. Vượt xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng chỉ được báo hiệu bằng đèn.",
+      list: [
+        "Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi.",
+        "Chỉ được báo hiệu bằng còi.",
+        "Phải báo hiệu bằng cả còi và đèn.",
+        "Chỉ được báo hiệu bằng đèn.",
+      ]
+    },
+  },
+  {
+    question: {
+      content: "Bạn đang lái xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng hôm sau và cần vượt một xe khác, bạn cần báo hiệu như thế nào để đảm bảo an toàn giao thông?",
+      image: "/img/14.jpg",
+    },
+    ans: {
+      true_ans: 3,
+      description: "Điều 14 Luật Giao thông đường bộ 2008; - Nghị định 46 năm 2016 quy định. Vượt xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng chỉ được báo hiệu bằng đèn.",
+      list: [
+        "Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi.",
+        "Chỉ được báo hiệu bằng còi.",
+        "Phải báo hiệu bằng cả còi và đèn.",
+        "Chỉ được báo hiệu bằng đèn.",
+      ]
+    },
+  },
+  {
+    question: {
+      content: "Bạn đang lái xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng hôm sau và cần vượt một xe khác, bạn cần báo hiệu như thế nào để đảm bảo an toàn giao thông?",
+      image: "/img/14.jpg",
+    },
+    ans: {
+      true_ans: 3,
+      description: "Điều 14 Luật Giao thông đường bộ 2008; - Nghị định 46 năm 2016 quy định. Vượt xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng chỉ được báo hiệu bằng đèn.",
+      list: [
+        "Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi.",
+        "Chỉ được báo hiệu bằng còi.",
+        "Phải báo hiệu bằng cả còi và đèn.",
+        "Chỉ được báo hiệu bằng đèn.",
+      ]
+    },
+  },
+  {
+    question: {
+      content: "Bạn đang lái xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng hôm sau và cần vượt một xe khác, bạn cần báo hiệu như thế nào để đảm bảo an toàn giao thông?",
+      image: "/img/14.jpg",
+    },
+    ans: {
+      true_ans: 3,
+      description: "Điều 14 Luật Giao thông đường bộ 2008; - Nghị định 46 năm 2016 quy định. Vượt xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng chỉ được báo hiệu bằng đèn.",
+      list: [
+        "Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi.",
+        "Chỉ được báo hiệu bằng còi.",
+        "Phải báo hiệu bằng cả còi và đèn.",
+        "Chỉ được báo hiệu bằng đèn.",
+      ]
+    },
+  },
+  {
+    question: {
+      content: "Bạn đang lái xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng hôm sau và cần vượt một xe khác, bạn cần báo hiệu như thế nào để đảm bảo an toàn giao thông?",
       image: "/img/15.jpg",
     },
     ans: {
@@ -134,7 +310,7 @@ export const listQuestion = [
       image: "",
     },
     ans: {
-      true_ans: 3,
+      true_ans: 2,
       description: "Điều 14 Luật Giao thông đường bộ 2008; - Nghị định 46 năm 2016 quy định. Vượt xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng chỉ được báo hiệu bằng đèn.",
       list: [
         "Phải báo hiệu bằng đèn hoặc còi.",
