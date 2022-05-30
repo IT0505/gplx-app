@@ -16,10 +16,11 @@
   flex-direction: column;
   align-items: center;
   cursor: pointer;
-  transition-duration: 250ms;
+  transition: transform 250ms;
 
   &:hover {
     transform: scale(1.1);
+    border: 2px solid #feb518;
   }
 
   @include Responsive(M) {
