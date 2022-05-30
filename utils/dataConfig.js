@@ -64,17 +64,20 @@ export const MDService = {
       title: 'Ôn tập',
       description:
         'Lựa chọn một trong 4 nhóm câu hỏi để ôn tập dưới dạng trắc nghiệm',
+      url: '/groupquest',
     },
     {
       iconClass: 'fi fi-sr-graduation-cap',
       title: 'Thi thử',
       description:
         'Lựa chọn một trong 8 bộ đề để thi thử dưới dạng trắc nghiệm',
+      url: '/exam',
     },
     {
       iconClass: 'fi fi-sr-book',
       title: 'Ôn lại',
       description: 'Ôn tập lại những câu hỏi  bạn cảm thấy khó nhớ',
+      url: '/practice',
     },
   ],
 };

@@ -2,22 +2,34 @@ import styles from './QnASection.module.scss';
 import QuestionNav from './components/QuestionNav/QuestionNav';
 import QuestionSection from './components/QuestionSection/QuestionSection';
 import AnswerSection from './components/AnswerSection/AnswerSection';
-import { useState } from 'react';
-import { listQuestion } from '../../utils/dataConfig';
+import { useState, useEffect } from 'react';
+import { listQuestion as lst } from '../../utils/dataConfig';
+
+import { APIGetListQuestions } from '../../api/examApi';
 
 export default function QnASection({ status }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
+  const [listQuestion, setListQuestion] = useState();
   const listTemp = [];
-  for (let i = 0; i < listQuestion.length; i++) {
-    listTemp.push({
-      isAnswered: false,
-      isCorrect: false,
-      index: -1,
-    });
-  }
 
-  const [listAnswered, setListAnswered] = useState(listTemp);
+  useEffect(() => {
+    if (status.isExam) {
+      APIGetListQuestions().then((res) => {
+        console.log(res.data);
+        setListQuestion(res.data);
+        for (let i = 0; i < res.data.length; i++) {
+          listTemp.push({
+            isAnswered: false,
+            isCorrect: false,
+            index: -1,
+          });
+        }
+        setListAnswered(listTemp);
+      });
+    }
+  }, []);
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [listAnswered, setListAnswered] = useState();
 
   const setAnswered = (isCorrect, index) => {
     let temp = [...listAnswered];
@@ -28,6 +40,10 @@ export default function QnASection({ status }) {
     };
     setListAnswered(temp);
   };
+
+  if (!listQuestion || !listAnswered) {
+    return <div className='App'>Loading...</div>;
+  }
 
   return (
     <div className={styles.examSection}>
@@ -43,7 +59,7 @@ export default function QnASection({ status }) {
             <AnswerSection
               answer={listQuestion[currentIndex].answer}
               setAnswered={setAnswered}
-              listAnswered={listAnswered[currentIndex]}
+              answered={listAnswered[currentIndex]}
             />
           </div>
           <QuestionNav

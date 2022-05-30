@@ -2,13 +2,8 @@ import Head from 'next/head';
 import { Layout } from '../components/Layout/Layout';
 import Banner from '../components/Banner/Banner';
 import Service from '../components/Service/Service';
-import useToken from '../api/useToken';
 
-export default function Index() {
-  const { token } = useToken();
-  if (token) {
-    useNavigate('/home');
-  }
+export default function Home() {
   return (
     <>
       <Head>

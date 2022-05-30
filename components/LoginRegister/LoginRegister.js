@@ -7,6 +7,9 @@ import { RedErrorMessage } from '../CustomMessage/CustomMessage';
 import { APILogin } from '../../api/userApi';
 import { APIRegister } from '../../api/userApi';
 
+import useToken from '../../api/useToken';
+import { useRouter } from 'next/router';
+
 const MDLogin = {
   title: 'Sát hạch GPLX (SHG)',
   title1:
@@ -41,10 +44,19 @@ const LoginSchema = Yup.object().shape({
 });
 
 export const LoginSection = () => {
+  const router = useRouter();
   const { title, title1 } = MDLogin;
+  const { saveToken } = useToken();
 
   const handleLogin = (values) => {
-    APILogin(values).then((res) => console.log(res.data));
+    APILogin(values).then((res) => {
+      if (res.data !== -1) {
+        saveToken(res.data);
+        router.push('/home');
+      } else {
+        window.alert('User not exist!');
+      }
+    });
   };
 
   return (
@@ -109,10 +121,19 @@ export const LoginSection = () => {
 };
 
 export const RegisterSection = () => {
+  const router = useRouter();
   const { title, title1 } = MDLogin;
+  const { saveToken } = useToken();
 
   const handleRegister = (values) => {
-    APIRegister(values).then((res) => console.log(res.data));
+    APIRegister(values).then((res) => {
+      if (res.data !== -1) {
+        saveToken(res.data);
+        router.push('/home');
+      } else {
+        window.alert('Username existed!!!');
+      }
+    });
   };
 
   return (

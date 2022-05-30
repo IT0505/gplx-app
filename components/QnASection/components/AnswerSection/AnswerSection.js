@@ -1,7 +1,7 @@
 import styles from './AnswerSection.module.scss';
 import { useState } from 'react';
 
-export default function AnswerSection({ answer, setAnswered, listAnswered }) {
+export default function AnswerSection({ answer, setAnswered, answered }) {
   const handleAnswerIndex = (index) => {
     switch (index) {
       case 0:
@@ -27,9 +27,9 @@ export default function AnswerSection({ answer, setAnswered, listAnswered }) {
   };
 
   const handleAnswerVisual = (index) => {
-    if (index == listAnswered.index) {
+    if (index == answered.index) {
       // check if current question is answered
-      if (listAnswered.isCorrect) {
+      if (answered.isCorrect) {
         // check if answer correct or not
         return styles.true;
       } else return styles.false;
@@ -45,7 +45,7 @@ export default function AnswerSection({ answer, setAnswered, listAnswered }) {
             key={index}
             className={`${styles.ansWrap} ${handleAnswerVisual(index)}`}
             onClick={() => {
-              if (!listAnswered.isAnswered) handleAnswerResult(index);
+              if (!answered.isAnswered) handleAnswerResult(index);
             }}
           >
             <div className={styles.bubble}>{handleAnswerIndex(index)}</div>
@@ -53,7 +53,7 @@ export default function AnswerSection({ answer, setAnswered, listAnswered }) {
           </div>
         ))}
       </div>
-      {!listAnswered.isCorrect && listAnswered.isAnswered && (
+      {!answered.isCorrect && answered.isAnswered && (
         <div className={styles.trueAns}>
           Câu trả lời đúng: {handleAnswerIndex(answer.true_answer)}
         </div>

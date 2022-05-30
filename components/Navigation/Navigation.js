@@ -1,16 +1,16 @@
 import styles from './Navigation.module.scss';
 import Image from 'next/image';
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect } from 'react';
 import Submenu from './components/Submenu/Submenu';
 import Link from 'next/link';
 import SocialIcon from './components/SocialIcon/SocialIcon';
 import { UserButton } from '../Button/Button';
 import { MDNavigation } from '../../utils/dataConfig';
-import { LoginContext } from '../../pages/_app';
+
+import useToken from '../../api/useToken';
 
 export default function Navigation() {
-  const { login } = useContext(LoginContext);
-
+  const { token } = useToken();
   const { logoSrc, logoAlt, navigationList, socialIcons } = MDNavigation;
 
   const [navigationOpen, setNavigationOpen] = useState(false);
@@ -88,7 +88,7 @@ export default function Navigation() {
                 <SocialIcon data={item} key={index} style={'style1'} />
               ))}
             </div>
-            <UserButton login={login} />
+            <UserButton login={token} />
           </div>
           <button
             type='button'
