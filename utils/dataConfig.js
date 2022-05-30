@@ -78,8 +78,6 @@ export const MDService = {
     },
   ],
 };
-<<<<<<< Updated upstream
-=======
 
 export const MDGroup_quest = [
   {
@@ -98,13 +96,12 @@ export const MDGroup_quest = [
       '6,14,15,16,17,18,19,20,21,39,40,41,42,43,44,45,46,64,65,66,67,68,69,70,71,89,90,91,92,93,94,95,96,113,114,115,116,117,118,119,120,121,138,139,140,141,142,143,144,145,163,164,165,166,167,168,169,170,188,189,190,191,192,193,194,195',
   },
   {
-    name: 'Điểm liệt',
+    name: 'Sa hình',
     list_quest:
       '22,23,24,25,47,48,49,50,72,73,74,75,97,98,99,100,122,123,124,125,146,147,148,149,150,171,172,173,174,175,196,197,198,199,200',
   },
 ];
 
->>>>>>> Stashed changes
 export const listQuestion = [
   {
     question: {
@@ -112,10 +109,6 @@ export const listQuestion = [
         'Bạn đang lái xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng hôm sau và cần vượt một xe khác, bạn cần báo hiệu như thế nào để đảm bảo an toàn giao thông?',
       image: '/img/14.jpg',
     },
-<<<<<<< Updated upstream
-    ans: {
-      true_ans: 3,
-=======
     answer: {
       true_answer: 3,
       description:
@@ -210,7 +203,6 @@ export const listQuestion = [
       true_answer: 3,
       description:
         'Điều 14 Luật Giao thông đường bộ 2008; - Nghị định 46 năm 2016 quy định. Vượt xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng chỉ được báo hiệu bằng đèn.',
->>>>>>> Stashed changes
       list: [
         'Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi.',
         'Chỉ được báo hiệu bằng còi.',
@@ -225,15 +217,10 @@ export const listQuestion = [
         'Bạn đang lái xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng hôm sau và cần vượt một xe khác, bạn cần báo hiệu như thế nào để đảm bảo an toàn giao thông?',
       image: '/img/14.jpg',
     },
-<<<<<<< Updated upstream
-    ans: {
-      true_ans: 3,
-=======
     answer: {
       true_answer: 3,
       description:
         'Điều 14 Luật Giao thông đường bộ 2008; - Nghị định 46 năm 2016 quy định. Vượt xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng chỉ được báo hiệu bằng đèn.',
->>>>>>> Stashed changes
       list: [
         'Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi.',
         'Chỉ được báo hiệu bằng còi.',
@@ -248,15 +235,10 @@ export const listQuestion = [
         'Bạn đang lái xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng hôm sau và cần vượt một xe khác, bạn cần báo hiệu như thế nào để đảm bảo an toàn giao thông?',
       image: '/img/14.jpg',
     },
-<<<<<<< Updated upstream
-    ans: {
-      true_ans: 3,
-=======
     answer: {
       true_answer: 3,
       description:
         'Điều 14 Luật Giao thông đường bộ 2008; - Nghị định 46 năm 2016 quy định. Vượt xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng chỉ được báo hiệu bằng đèn.',
->>>>>>> Stashed changes
       list: [
         'Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi.',
         'Chỉ được báo hiệu bằng còi.',
@@ -271,15 +253,10 @@ export const listQuestion = [
         'Bạn đang lái xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng hôm sau và cần vượt một xe khác, bạn cần báo hiệu như thế nào để đảm bảo an toàn giao thông?',
       image: '/img/14.jpg',
     },
-<<<<<<< Updated upstream
-    ans: {
-      true_ans: 3,
-=======
     answer: {
       true_answer: 3,
       description:
         'Điều 14 Luật Giao thông đường bộ 2008; - Nghị định 46 năm 2016 quy định. Vượt xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng chỉ được báo hiệu bằng đèn.',
->>>>>>> Stashed changes
       list: [
         'Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi.',
         'Chỉ được báo hiệu bằng còi.',
@@ -294,15 +271,10 @@ export const listQuestion = [
         'Bạn đang lái xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng hôm sau và cần vượt một xe khác, bạn cần báo hiệu như thế nào để đảm bảo an toàn giao thông?',
       image: '/img/14.jpg',
     },
-<<<<<<< Updated upstream
-    ans: {
-      true_ans: 3,
-=======
     answer: {
       true_answer: 3,
       description:
         'Điều 14 Luật Giao thông đường bộ 2008; - Nghị định 46 năm 2016 quy định. Vượt xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng chỉ được báo hiệu bằng đèn.',
->>>>>>> Stashed changes
       list: [
         'Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi.',
         'Chỉ được báo hiệu bằng còi.',
@@ -317,15 +289,10 @@ export const listQuestion = [
         'Bạn đang lái xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng hôm sau và cần vượt một xe khác, bạn cần báo hiệu như thế nào để đảm bảo an toàn giao thông?',
       image: '/img/14.jpg',
     },
-<<<<<<< Updated upstream
-    ans: {
-      true_ans: 3,
-=======
     answer: {
       true_answer: 3,
       description:
         'Điều 14 Luật Giao thông đường bộ 2008; - Nghị định 46 năm 2016 quy định. Vượt xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng chỉ được báo hiệu bằng đèn.',
->>>>>>> Stashed changes
       list: [
         'Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi.',
         'Chỉ được báo hiệu bằng còi.',
@@ -340,15 +307,10 @@ export const listQuestion = [
         'Bạn đang lái xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng hôm sau và cần vượt một xe khác, bạn cần báo hiệu như thế nào để đảm bảo an toàn giao thông?',
       image: '/img/14.jpg',
     },
-<<<<<<< Updated upstream
-    ans: {
-      true_ans: 3,
-=======
     answer: {
       true_answer: 3,
       description:
         'Điều 14 Luật Giao thông đường bộ 2008; - Nghị định 46 năm 2016 quy định. Vượt xe trong khu vực đô thị từ 22 giờ đến 5 giờ sáng chỉ được báo hiệu bằng đèn.',
->>>>>>> Stashed changes
       list: [
         'Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi. Phải báo hiệu bằng đèn hoặc còi.',
         'Chỉ được báo hiệu bằng còi.',
@@ -357,8 +319,6 @@ export const listQuestion = [
       ],
     },
   },
-<<<<<<< Updated upstream
-=======
   {
     question: {
       content:
@@ -538,5 +498,4 @@ export const listQuestion = [
       ],
     },
   },
->>>>>>> Stashed changes
 ];

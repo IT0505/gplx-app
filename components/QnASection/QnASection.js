@@ -33,16 +33,7 @@ export default function QnASection({ status }) {
     <div className={styles.examSection}>
       <div className='container v2'>
         <div className={styles.examSectionInner}>
-<<<<<<< Updated upstream
           <div className={styles.qaWrap}>
-=======
-          <div
-            className={styles.qaWrap}
-            onClick={() => {
-              console.log(listAnswered);
-            }}
-          >
->>>>>>> Stashed changes
             <QuestionSection
               question={listQuestion[currentIndex].question}
               index={currentIndex + 1}
