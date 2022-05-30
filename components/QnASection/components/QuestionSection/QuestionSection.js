@@ -4,8 +4,8 @@ import styles from './QuestionSection.module.scss'
 export default function QuestionSection({ question, index, status, listAnswered }) {
 
   const [timeLeft, setTimeLeft] = useState({
-    minutes: 0,
-    seconds: 10,
+    minutes: 30,
+    seconds: 0,
   })
 
   const [result, setResult] = useState({
@@ -51,7 +51,7 @@ export default function QuestionSection({ question, index, status, listAnswered 
 
       return () => clearTimeout(timer)
     }
-  })
+  },[timeLeft])
 
   return (
     <div className={styles.questionSection}>

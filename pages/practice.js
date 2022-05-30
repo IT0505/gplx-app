@@ -1,11 +1,11 @@
 import QnASection from '../components/QnASection/QnASection';
 import React from 'react';
 
-export default function Exam() {
+export default function Practice() {
 
   return (
-    <QnASection status={{
-      isExam: true
-    }} />
+        <QnASection status={{
+          isLogin: true,
+        }} />
     )
 }

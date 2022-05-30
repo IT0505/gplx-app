@@ -9,7 +9,7 @@ export const Layout = ({ children }) => {
         <Navigation />
         {children}
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

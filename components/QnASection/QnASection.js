@@ -34,7 +34,7 @@ export default function QnASection({status}) {
     <div className={styles.examSection}>
       <div className='container v2'>
         <div className={styles.examSectionInner}>
-          <div className={styles.qaWrap} onClick={() => {console.log(listAnswered)}}>
+          <div className={styles.qaWrap}>
             <QuestionSection
               question={listQuestion[currentIndex].question}
               index={currentIndex + 1}
