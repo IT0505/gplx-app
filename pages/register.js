@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { LayoutLogin } from '../components/Layout/Layout';
-import LoginSection from '../components/LoginSection/LoginSection';
+import { RegisterSection } from '../components/LoginRegister/LoginRegister';
 export default function Register() {
   return (
     <>
@@ -10,7 +10,7 @@ export default function Register() {
       </Head>
 
       <LayoutLogin>
-        <LoginSection />
+        <RegisterSection />
       </LayoutLogin>
     </>
   );

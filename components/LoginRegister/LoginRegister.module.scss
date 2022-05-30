@@ -1,5 +1,5 @@
 @import '../../styles/mixin.scss';
-.loginSection {
+.loginRegister {
   background-image: url('/img/background-1.jpg');
   background-repeat: no-repeat;
   background-position: center;
@@ -12,7 +12,7 @@
   align-items: center;
   flex-direction: column;
 
-  .loginSectionInner {
+  .loginRegisterInner {
     display: flex;
     justify-content: space-between;
     align-items: center;

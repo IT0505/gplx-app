@@ -1,15 +1,8 @@
 import Head from 'next/head';
 import { LayoutLogin } from '../components/Layout/Layout';
-import LoginSection from '../components/LoginSection/LoginSection';
-import { LoginContext } from '../pages/_app';
-import { useContext } from 'react';
+import { LoginSection } from '../components/LoginRegister/LoginRegister';
 
 export default function Login() {
-  const { login } = useContext(LoginContext);
-
-  if (login) {
-    window.location.href = '/';
-  }
   return (
     <>
       <Head>
@@ -18,7 +11,7 @@ export default function Login() {
       </Head>
 
       <LayoutLogin>
-        <LoginSection login={true} />
+        <LoginSection />
       </LayoutLogin>
     </>
   );

@@ -1,6 +1,5 @@
 import styles from './Button.module.scss';
 import Link from 'next/link';
-import { logout } from '../../api/session';
 
 export const NormalButton = ({ children, type }) => {
   return (
@@ -12,9 +11,7 @@ export const NormalButton = ({ children, type }) => {
 
 export const UserButton = ({ login }) => {
   return login ? (
-    <button className={styles.userButton} onClick={logout}>
-      Logout
-    </button>
+    <button className={styles.userButton}>Logout</button>
   ) : (
     <Link href='/login'>
       <a className={styles.userButton}>Login</a>
