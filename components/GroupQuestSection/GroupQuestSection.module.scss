@@ -1,3 +1,5 @@
+@import '../../styles/mixin.scss';
+
 .groupQuestSection {
   padding: 100px 0;
   background-image: url('/img/background-1.jpg');
@@ -11,4 +13,75 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
+
+  .groupQuestSectionInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px 0;
+
+    .choiceItem {
+      position: relative;
+      z-index: 1;
+      max-width: 45%;
+      width: 100%;
+      padding: 50px 0;
+      background-color: #fff;
+      border-radius: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+      transition-duration: 0.25s;
+      border: 2px solid transparent;
+
+      @include Responsive(S) {
+        max-width: 90%;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 10px 40px;
+        margin: 0 auto;
+      }
+
+      cursor: pointer;
+
+      &:hover {
+        background-color: transparent;
+        color: #feb518;
+
+        border: 2px solid #feb518;
+      }
+
+      h1 {
+        font-size: 48px;
+        color: #feb518;
+        font-weight: bold;
+
+        @include Responsive(S) {
+          font-size: 32px;
+        }
+
+        @include Responsive(XS) {
+          font-size: 24px;
+        }
+      }
+
+      h2 {
+        font-size: 36px;
+        text-transform: uppercase;
+        font-weight: bold;
+
+        @include Responsive(S) {
+          font-size: 32px;
+        }
+
+        @include Responsive(XS) {
+          font-size: 24px;
+        }
+      }
+    }
+  }
 }

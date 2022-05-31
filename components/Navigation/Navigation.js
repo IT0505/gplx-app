@@ -17,7 +17,7 @@ export default function Navigation() {
   const [top, setTop] = useState(true);
 
   useEffect(() => {
-    window.addEventListener('load', (e) => {
+    window.addEventListener('load', () => {
       if (window.pageYOffset <= 200) {
         setTop(true);
       } else setTop(false);
@@ -27,7 +27,7 @@ export default function Navigation() {
         setTop(true);
       } else setTop(false);
     });
-  }, [top]);
+  }, []);
 
   return (
     <div className={`${styles.navigation} ${!top && styles.nonTop}`}>
