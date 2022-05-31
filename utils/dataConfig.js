@@ -76,7 +76,8 @@ export const MDService = {
     {
       iconClass: 'fi fi-sr-book',
       title: 'Ôn lại',
-      description: 'Ôn tập lại những câu hỏi  bạn cảm thấy khó nhớ',
+      description:
+        'Ôn lại những câu hỏi cần ôn lại hoặc những câu hỏi không cần ôn lại',
       url: '/practice',
     },
   ],
