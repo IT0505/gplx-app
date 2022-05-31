@@ -28,7 +28,7 @@
       max-width: 45%;
       width: 100%;
       padding: 50px 0;
-      background-color: #fff;
+      background-color: transparent;
       border-radius: 30px;
       display: flex;
       justify-content: center;
@@ -36,7 +36,8 @@
       flex-direction: column;
       gap: 10px;
       transition-duration: 0.25s;
-      border: 2px solid transparent;
+      border: 2px solid #feb518;
+      color: #feb518;
 
       @include Responsive(S) {
         max-width: 90%;
@@ -49,10 +50,10 @@
       cursor: pointer;
 
       &:hover {
-        background-color: transparent;
-        color: #feb518;
+        background-color: #fff;
+        color: #555555;
 
-        border: 2px solid #feb518;
+        border: 2px solid transparent;
       }
 
       h1 {
