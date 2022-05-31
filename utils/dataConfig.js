@@ -55,6 +55,7 @@ export const MDBanner = {
   title2:
     'Bao gồm 200 câu hỏi lý thuyết chia thành 4 nhóm câu hỏi giúp ôn tập dễ dàng!',
   backgroundImage: '/img/background-1.jpg',
+  url: '/exam',
 };
 
 export const MDService = {

@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { LayoutLogin } from '../components/Layout/Layout';
+import { LayoutSimple } from '../components/Layout/Layout';
 import { LoginSection } from '../components/LoginRegister/LoginRegister';
 import useToken from '../api/useToken';
 import { useRouter } from 'next/router';
@@ -22,9 +22,9 @@ export default function Login() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <LayoutLogin>
+      <LayoutSimple>
         <LoginSection />
-      </LayoutLogin>
+      </LayoutSimple>
     </>
   );
 }

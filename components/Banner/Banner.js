@@ -2,9 +2,10 @@ import styles from './Banner.module.scss';
 import Parallax from '../Parallax/Parallax';
 import { MDBanner } from '../../utils/dataConfig';
 import { NormalButton } from '../Button/Button';
+import Link from 'next/link';
 
 export default function Banner() {
-  const { title, title1, title2, backgroundImage } = MDBanner;
+  const { title, title1, title2, backgroundImage, url } = MDBanner;
   return (
     <Parallax
       className={`${styles.banner} overlay`}
@@ -18,7 +19,11 @@ export default function Banner() {
           </div>
           <div className={styles.rightContent}>
             <h3 className={styles.title}>{title2}</h3>
-            <NormalButton>Thi ngay</NormalButton>
+            <Link href={url}>
+              <a>
+                <NormalButton>Thi ngay</NormalButton>
+              </a>
+            </Link>
           </div>
         </div>
       </div>

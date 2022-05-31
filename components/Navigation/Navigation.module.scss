@@ -42,6 +42,8 @@
       width: 100%;
       // margin: 0;
       position: relative;
+      border-radius: 50px;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 
       @include Responsive(XS) {
         max-width: 150px;
