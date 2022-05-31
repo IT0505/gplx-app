@@ -31,6 +31,9 @@
       &.false{
         background-color: #9b0e0e;
       }
+      &.choosen{
+        background-color: #474747;
+      }
       .bubble {
         display: flex;
         justify-content: center;

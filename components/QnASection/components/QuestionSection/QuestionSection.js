@@ -6,7 +6,9 @@ export default function QuestionSection({
   question,
   index,
   status,
+  setIsExamDone,
   listAnswered,
+  questionId
 }) {
   const [timeLeft, setTimeLeft] = useState({
     minutes: 25,
@@ -25,6 +27,7 @@ export default function QuestionSection({
       if (listAnswered[i].isAnswered) if (listAnswered[i].isCorrect) score++;
     }
     setResult({ ...result, score: score, examDone: true });
+    setIsExamDone(true)
   };
 
   const calculateTimeLeft = (minutes, seconds) => {
@@ -45,7 +48,7 @@ export default function QuestionSection({
   };
 
   useEffect(() => {
-    if (status.isExam) {
+    if (status.isExam && !result.examDone) {
       const timer = setTimeout(() => {
         calculateTimeLeft(timeLeft.minutes, timeLeft.seconds);
       }, 1000);
@@ -54,11 +57,15 @@ export default function QuestionSection({
     }
   }, [timeLeft]);
 
-  const handleSaveReview = (index) => {
+  const handleSaveReview = () => {
     APISaveReview({
       user_id: sessionStorage.getItem('token'),
-      quest_id: index,
+      quest_id: questionId,
     }).then((res) => {
+      if(res.data === -1)
+        window.alert("This question already marked!")
+      else
+        window.alert("Question marked!")
       console.log(res);
     });
   };
@@ -67,10 +74,13 @@ export default function QuestionSection({
     <div className={styles.questionSection}>
       <div className={styles.titleWrap}>
         <h1 className={styles.title}>Câu hỏi {index}</h1>
+        {status.isExam && (
+          <div className={styles.submitButton} onClick={() => calculateResult()} >submit</div>
+        )}
         {status.isLogin && (
           <span
             className={styles.markButton}
-            onClick={() => handleSaveReview(index)}
+            onClick={() => handleSaveReview()}
           >
             <i className='fi fi-sr-pennant'></i>
           </span>

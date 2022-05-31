@@ -3,6 +3,7 @@ import React from 'react';
 import { APIGetListQuestions } from '../api/examApi';
 import { useState, useEffect } from 'react';
 import { Loading } from '../components/Loading/Loading';
+import { LayoutSimple } from '../components/Layout/Layout'
 
 export default function Exam() {
   const [listQuestion, setListQuestion] = useState();
@@ -16,11 +17,13 @@ export default function Exam() {
   return !listQuestion ? (
     <div>Loading...</div>
   ) : (
-    <QnASection
-      status={{
-        isExam: true,
-      }}
-      listQuestion={listQuestion}
-    />
+    <LayoutSimple>
+      <QnASection
+        status={{
+          isExam: true,
+        }}
+        listQuestion={listQuestion}
+      />
+    </LayoutSimple>
   );
 }

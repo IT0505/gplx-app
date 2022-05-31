@@ -30,6 +30,21 @@
         background-color: #9e4c008a;
       }
     }
+    .submitButton{
+      margin-left: 20px;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #ebebeb;
+      width: fit-content;
+      padding: 2px 5px;
+      border: 3px solid rgba(255, 255, 255, 0.5);
+
+      &:hover{
+      border: 3px solid rgba(255, 255, 255, 0.8);
+        cursor: pointer;
+      }
+    }
     .title {
       font-size: 20px;
       font-weight: bold;

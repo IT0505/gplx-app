@@ -1,7 +1,7 @@
 import styles from './AnswerSection.module.scss';
 import { useState } from 'react';
 
-export default function AnswerSection({ answer, setAnswered, answered }) {
+export default function AnswerSection({ answer, setAnswered, status, isExamDone, answered }) {
   const handleAnswerIndex = (index) => {
     switch (index) {
       case 0:
@@ -16,25 +16,56 @@ export default function AnswerSection({ answer, setAnswered, answered }) {
   };
 
   const handleAnswerResult = (index) => {
-    if (index == answer.true_answer) {
-      setAnswered(true, index);
-      console.log('answer true');
-    } else {
-      setAnswered(false, index);
-
-      console.log('answer false');
+    if (status.isExam && !isExamDone) {
+      if (index == answer.true_answer) {
+        setAnswered(true, index);
+      } else {
+        setAnswered(false, index);
+      }
+    }
+    else if (!answered.isAnswered) {
+      if (index == answer.true_answer) {
+        setAnswered(true, index);
+      } else {
+        setAnswered(false, index);
+      }
     }
   };
 
   const handleAnswerVisual = (index) => {
-    if (index == answered.index) {
-      // check if current question is answered
-      if (answered.isCorrect) {
-        // check if answer correct or not
-        return styles.true;
-      } else return styles.false;
-    } else return '';
+    if (index == answered.index) { // check if current question is answered and answer index equal with answered index
+      if (answered.isCorrect) { // check if answer correct or not
+        return styles.true
+      } else return styles.false
+    }
+    else return ''
   };
+
+  const handleAnswerVisualExam = (index) => {
+    if (index == answered.index) {
+      if (isExamDone) {
+        if (answered.isCorrect) { // check if answer correct or not
+          return styles.true
+        } else return styles.false
+      }
+      else return styles.choosen
+    }
+    return ''
+  }
+
+  const handleShowTrueAnswer = () => {
+    if (answered.isAnswered)
+      return !answered.isCorrect
+  }
+
+  const handleShowTrueAnswerExam = () => {
+    if (isExamDone) {
+      if (answered.isAnswered) {
+        return !answered.isCorrect
+      }
+      else return true
+    }
+  }
 
   return (
     <div className={styles.answerSection}>
@@ -43,17 +74,15 @@ export default function AnswerSection({ answer, setAnswered, answered }) {
         {answer.list.map((data, index) => (
           <div
             key={index}
-            className={`${styles.ansWrap} ${handleAnswerVisual(index)}`}
-            onClick={() => {
-              if (!answered.isAnswered) handleAnswerResult(index);
-            }}
+            className={`${styles.ansWrap} ${status.isExam ? handleAnswerVisualExam(index) : handleAnswerVisual(index)}`}
+            onClick={() => {handleAnswerResult(index)}}
           >
             <div className={styles.bubble}>{handleAnswerIndex(index)}</div>
             <div className={styles.answer}>{data}</div>
           </div>
         ))}
       </div>
-      {!answered.isCorrect && answered.isAnswered && (
+      {(status.isExam ? handleShowTrueAnswerExam() : handleShowTrueAnswer()) && (
         <div className={styles.trueAns}>
           Câu trả lời đúng: {handleAnswerIndex(answer.true_answer)}
         </div>

@@ -50,6 +50,9 @@ $item-width: 43px;
         background-color: #CC9544;
         color: #000000;
       }
+      &.choosen{
+        background-color: #474747;
+      }
       &.true{
         background-color: #255c00;
       }

@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import useToken from '../api/useToken';
 import { APIGetListQuestions } from '../api/reviewApi';
 import { useRouter } from 'next/router';
+import { LayoutSimple } from '../components/Layout/Layout';
 
 export default function Practice() {
   const router = useRouter();
@@ -26,11 +27,13 @@ export default function Practice() {
   return !listQuestion ? (
     <div>Loading...</div>
   ) : (
-    <QnASection
-      status={{
-        isLogin: true,
-      }}
-      listQuestion={listQuestion}
-    />
+    <LayoutSimple>
+      <QnASection
+        status={{
+          isLogin: true,
+        }}
+        listQuestion={listQuestion}
+      />
+    </LayoutSimple>
   );
 }

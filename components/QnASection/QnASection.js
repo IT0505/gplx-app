@@ -7,6 +7,7 @@ import { useState } from 'react';
 
 export default function QnASection({ status, listQuestion }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isExamDone, setIsExamDone] = useState(false);
 
   const listTemp = [];
   for (let i = 0; i < listQuestion.length; i++) {
@@ -37,17 +38,23 @@ export default function QnASection({ status, listQuestion }) {
               question={listQuestion[currentIndex].question}
               index={currentIndex + 1}
               status={status}
+              setIsExamDone={setIsExamDone}
               listAnswered={listAnswered}
+              questionId={listQuestion[currentIndex].id}
             />
             <AnswerSection
               answer={listQuestion[currentIndex].answer}
               setAnswered={setAnswered}
+              status={status}
+              isExamDone={isExamDone}
               answered={listAnswered[currentIndex]}
             />
           </div>
           <QuestionNav
             setCurrentIndex={setCurrentIndex}
             length={listQuestion.length}
+            status={status}
+            isExamDone={isExamDone}
             currentIndex={currentIndex}
             listAnswered={listAnswered}
           />
