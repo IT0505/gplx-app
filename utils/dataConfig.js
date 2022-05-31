@@ -78,7 +78,7 @@ export const MDService = {
       title: 'Ôn lại',
       description:
         'Ôn lại những câu hỏi cần ôn lại hoặc những câu hỏi không cần ôn lại',
-      url: '/practice',
+      url: '/review',
     },
   ],
 };

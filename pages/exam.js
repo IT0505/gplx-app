@@ -5,11 +5,13 @@ import { useState, useEffect } from 'react';
 
 export default function Exam() {
   const [listQuestion, setListQuestion] = useState();
+
   useEffect(() => {
     APIGetListQuestions().then((res) => {
       setListQuestion(res.data);
     });
   }, []);
+
   return !listQuestion ? (
     <div>Loading...</div>
   ) : (

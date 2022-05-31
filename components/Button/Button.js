@@ -1,7 +1,7 @@
 import styles from './Button.module.scss';
 import Link from 'next/link';
 import useToken from '../../api/useToken';
-import { useRouter } from 'next/router';
+import { useState, useEffect } from 'react';
 
 export const NormalButton = ({ children, type }) => {
   return (
@@ -11,19 +11,25 @@ export const NormalButton = ({ children, type }) => {
   );
 };
 
-export const UserButton = ({ login }) => {
-  const router = useRouter();
-  const { deleteToken } = useToken();
-  return login ? (
-    <a
-      className={styles.userButton}
-      onClick={() => {
-        deleteToken();
-        router.push('/');
-      }}
-    >
-      Logout
-    </a>
+export const UserButton = () => {
+  const { token, deleteToken } = useToken();
+  const [session, setSession] = useState();
+
+  useEffect(() => {
+    setSession(token);
+  }, []);
+
+  return session ? (
+    <Link href='/'>
+      <a
+        className={styles.userButton}
+        onClick={() => {
+          deleteToken();
+        }}
+      >
+        Logout
+      </a>
+    </Link>
   ) : (
     <Link href='/login'>
       <a className={styles.userButton}>Login</a>

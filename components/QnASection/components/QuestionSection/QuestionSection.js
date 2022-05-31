@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { APIGetListQuestions, APISaveReview } from '../../../../api/reviewApi';
 import styles from './QuestionSection.module.scss';
 
 export default function QuestionSection({
@@ -53,12 +54,24 @@ export default function QuestionSection({
     }
   }, [timeLeft]);
 
+  const handleSaveReview = (index) => {
+    APISaveReview({
+      user_id: sessionStorage.getItem('token'),
+      quest_id: index,
+    }).then((res) => {
+      console.log(res);
+    });
+  };
+
   return (
     <div className={styles.questionSection}>
       <div className={styles.titleWrap}>
         <h1 className={styles.title}>Câu hỏi {index}</h1>
         {status.isLogin && (
-          <span className={styles.markButton}>
+          <span
+            className={styles.markButton}
+            onClick={() => handleSaveReview(index)}
+          >
             <i className='fi fi-sr-pennant'></i>
           </span>
         )}
