@@ -4,6 +4,7 @@ import useToken from '../api/useToken';
 import { APIGetListQuestions } from '../api/reviewApi';
 import { useRouter } from 'next/router';
 import { LayoutSimple } from '../components/Layout/Layout';
+import { Loading } from '../components/Loading/Loading'
 
 export default function Practice() {
   const router = useRouter();
@@ -25,12 +26,12 @@ export default function Practice() {
   const { token } = useToken();
 
   return !listQuestion ? (
-    <div>Loading...</div>
+    <Loading isReview={true}></Loading>
   ) : (
     <LayoutSimple>
       <QnASection
         status={{
-          isLogin: true,
+          isReview: true,
         }}
         listQuestion={listQuestion}
       />

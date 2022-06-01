@@ -5,7 +5,7 @@ import AnswerSection from './components/AnswerSection/AnswerSection';
 import { useState } from 'react';
 // import { listQuestion } from '../../utils/dataConfig';
 
-export default function QnASection({ status, listQuestion }) {
+export default function QnASection({ status, listQuestion, templateId }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isExamDone, setIsExamDone] = useState(false);
 
@@ -41,6 +41,7 @@ export default function QnASection({ status, listQuestion }) {
               setIsExamDone={setIsExamDone}
               listAnswered={listAnswered}
               questionId={listQuestion[currentIndex].id}
+              templateId={templateId}
             />
             <AnswerSection
               answer={listQuestion[currentIndex].answer}

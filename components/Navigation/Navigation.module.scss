@@ -238,6 +238,17 @@
         }
       }
 
+      .username {
+        margin-right: 20px;
+        text-transform: uppercase;
+        color: #feb518;
+        font-weight: bold;
+        font-size: 18px;
+
+        @include Responsive(M) {
+          display: none;
+        }
+      }
       .socialIconWrap {
         display: none;
         margin: 40px 0;

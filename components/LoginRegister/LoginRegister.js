@@ -20,12 +20,12 @@ import * as Yup from 'yup';
 
 const RegisterSchema = Yup.object().shape({
   username: Yup.string()
-    .min(5, 'Too Short!')
-    .max(50, 'Too Long!')
+    .min(5, 'Username must be between 5 to 50 characters')
+    .max(50, 'Username must be between 5 to 50 characters')
     .required('Required'),
   password: Yup.string()
-    .min(8, 'Too Short!')
-    .max(50, 'Too Long!')
+    .min(8, 'Password must be between 8 to 50 characters')
+    .max(50, 'Password must be between 8 to 50 characters')
     .required('Required'),
   confirmPassword: Yup.string()
     .oneOf([Yup.ref('password'), null], 'Passwords must match')
@@ -34,12 +34,12 @@ const RegisterSchema = Yup.object().shape({
 
 const LoginSchema = Yup.object().shape({
   username: Yup.string()
-    .min(5, 'Too Short!')
-    .max(50, 'Too Long!')
+    .min(5, 'Username must be between 5 to 50 characters')
+    .max(50, 'Username must be between 5 to 50 characters')
     .required('Required'),
   password: Yup.string()
-    .min(8, 'Too Short!')
-    .max(50, 'Too Long!')
+    .min(8, 'Password must be between 8 to 50 characters')
+    .max(50, 'Password must be between 8 to 50 characters')
     .required('Required'),
 });
 
@@ -50,11 +50,11 @@ export const LoginSection = () => {
 
   const handleLogin = (values) => {
     APILogin(values).then((res) => {
-      if (res.data !== -1) {
+      if (res.data) {
         saveToken(res.data);
         router.push('/home');
       } else {
-        window.alert('User not exist!');
+        window.alert('User not exist or password incorrect!');
       }
     });
   };
@@ -127,7 +127,7 @@ export const RegisterSection = () => {
 
   const handleRegister = (values) => {
     APIRegister(values).then((res) => {
-      if (res.data !== -1) {
+      if (res.data) {
         saveToken(res.data);
         router.push('/home');
       } else {

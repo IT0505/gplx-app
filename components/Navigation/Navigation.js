@@ -39,9 +39,8 @@ export default function Navigation() {
             </a>
           </Link>
           <div
-            className={`${styles.navigationRight} ${
-              navigationOpen && styles.open
-            }`}
+            className={`${styles.navigationRight} ${navigationOpen && styles.open
+              }`}
           >
             <button
               type='button'
@@ -55,7 +54,6 @@ export default function Navigation() {
                 <Image src={logoSrc} alt={logoAlt} layout='responsive'></Image>
               </a>
             </Link>
-
             {navigationList.map((item, index) => (
               <div className={styles.menuItemWrap} key={index}>
                 {item.url ? (
@@ -82,6 +80,7 @@ export default function Navigation() {
                 )}
               </div>
             ))}
+            {token && <span className={styles.username}>{sessionStorage.getItem('username')}</span>}
 
             <div className={styles.socialIconWrap}>
               {socialIcons.map((item, index) => (

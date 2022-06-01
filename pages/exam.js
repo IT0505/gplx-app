@@ -6,15 +6,15 @@ import { Loading } from '../components/Loading/Loading';
 import { LayoutSimple } from '../components/Layout/Layout'
 
 export default function Exam() {
-  const [listQuestion, setListQuestion] = useState();
+  const [examTemplate, setExamTemplate] = useState();
 
   useEffect(() => {
     APIGetListQuestions().then((res) => {
-      setListQuestion(res.data);
+      setExamTemplate(res.data);
     });
   }, []);
 
-  return !listQuestion ? (
+  return !examTemplate ? (
     <div>Loading...</div>
   ) : (
     <LayoutSimple>
@@ -22,7 +22,8 @@ export default function Exam() {
         status={{
           isExam: true,
         }}
-        listQuestion={listQuestion}
+        listQuestion={examTemplate.list_question}
+        templateId={examTemplate.exam_template_id}
       />
     </LayoutSimple>
   );

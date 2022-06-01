@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { APIGetListQuestions, APISaveReview } from '../../../../api/reviewApi';
 import styles from './QuestionSection.module.scss';
+import useToken from '../../../../api/useToken';
+import { APISaveExamScore } from '../../../../api/examApi';
 
 export default function QuestionSection({
   question,
@@ -8,8 +10,10 @@ export default function QuestionSection({
   status,
   setIsExamDone,
   listAnswered,
-  questionId
+  questionId,
+  templateId
 }) {
+  const { token } = useToken();
   const [timeLeft, setTimeLeft] = useState({
     minutes: 25,
     seconds: 0,
@@ -28,6 +32,16 @@ export default function QuestionSection({
     }
     setResult({ ...result, score: score, examDone: true });
     setIsExamDone(true)
+
+    const temp = {
+      user_id: token,
+      exam_template_id: templateId,
+      score : score,
+    }
+
+    APISaveExamScore(temp).then((res) => {
+      console.log(res)
+    })
   };
 
   const calculateTimeLeft = (minutes, seconds) => {
@@ -77,7 +91,7 @@ export default function QuestionSection({
         {status.isExam && (
           <div className={styles.submitButton} onClick={() => calculateResult()} >submit</div>
         )}
-        {status.isLogin && (
+        {(status.isLogin || status.isReview) && (
           <span
             className={styles.markButton}
             onClick={() => handleSaveReview()}
