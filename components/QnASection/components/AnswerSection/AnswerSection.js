@@ -16,11 +16,13 @@ export default function AnswerSection({ answer, setAnswered, status, isExamDone,
   };
 
   const handleAnswerResult = (index) => {
-    if (status.isExam && !isExamDone) {
-      if (index == answer.true_answer) {
-        setAnswered(true, index);
-      } else {
-        setAnswered(false, index);
+    if (status.isExam) {
+      if(!isExamDone) {
+        if (index == answer.true_answer) {
+          setAnswered(true, index);
+        } else {
+          setAnswered(false, index);
+        }
       }
     }
     else if (!answered.isAnswered) {

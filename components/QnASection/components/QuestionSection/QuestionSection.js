@@ -39,6 +39,8 @@ export default function QuestionSection({
       score : score,
     }
 
+    console.log(temp)
+
     APISaveExamScore(temp).then((res) => {
       console.log(res)
     })
