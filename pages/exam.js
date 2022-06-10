@@ -15,7 +15,7 @@ export default function Exam() {
   }, []);
 
   return !examTemplate ? (
-    <div>Loading...</div>
+    <Loading isReview={false}></Loading>
   ) : (
     <LayoutSimple>
       <QnASection
